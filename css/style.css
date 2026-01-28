@@ -1,0 +1,40 @@
+@charset "utf-8";
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+}
+body, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+h2 {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 100%;
+}
+.grid {
+  display: grid;
+  grid-template-columns:[one] 1fr [two] 1fr [three] 1fr [four];
+  height: 100vh;
+}
+.banner__wrapper {
+  grid-column-start: one;
+  grid-column-end: two;
+}
+.web-site__wrapper {
+  grid-column-start: two;
+  grid-column-end: three;
+  border: solid 1px black;
+  border-top: hidden;
+  border-bottom: hidden;
+}
+.flyer__wrapper {
+  grid-column-start: three;
+  grid-column-end: four;
+}
+.grid h2 {
+  position: relative;
+  top: calc(50% - 12px);
+  text-align: center;
+}
