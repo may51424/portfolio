@@ -13,6 +13,9 @@ h2 {
   font-weight: 300;
   line-height: 100%;
 }
+
+
+/*work*/
 .grid {
   display: grid;
   grid-template-columns:[one] 1fr [two] 1fr [three] 1fr [four];
