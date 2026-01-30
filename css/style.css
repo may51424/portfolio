@@ -53,3 +53,27 @@ input[type="radio"] {
 #flyer__radio:checked ~ .grid {
   grid-template-columns: 0.5fr 0.5fr 3fr;
 }
+#banner__radio:checked ~ .grid .web-site__wrapper h2 {
+  transform: rotate(180deg);
+  writing-mode: vertical-rl;
+}
+#banner__radio:checked ~ .grid .flyer__wrapper h2 {
+  transform: rotate(180deg);
+  writing-mode: vertical-rl;
+}
+#web-site__radio:checked ~ .grid .banner__wrapper h2 {
+  transform: rotate(180deg);
+  writing-mode: vertical-rl;
+}
+#web-site__radio:checked ~ .grid .flyer__wrapper h2 {
+  transform: rotate(180deg);
+  writing-mode: vertical-rl;
+}
+#flyer__radio:checked ~ .grid .banner__wrapper h2 {
+  transform: rotate(180deg);
+  writing-mode: vertical-rl;
+}
+#flyer__radio:checked ~ .grid .web-site__wrapper h2 {
+  transform: rotate(180deg);
+  writing-mode: vertical-rl;
+}
