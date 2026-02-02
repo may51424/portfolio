@@ -53,32 +53,55 @@ input[type="radio"] {
 #flyer__radio:checked ~ .grid {
   grid-template-columns: 0.5fr 0.5fr 3fr;
 }
+#reset:checked ~ .grid label label{
+  display: none;
+}
+
+/*banner*/
 #banner__radio:checked ~ .grid .banner__wrapper h2 {
   position: absolute;
   top: 15px;
   left: 15px;
 }
-#banner__radio:checked ~ .grid .web-site__wrapper h2 {
-  transform: rotate(180deg);
-  writing-mode: vertical-rl;
-}
+#banner__radio:checked ~ .grid .web-site__wrapper h2,
 #banner__radio:checked ~ .grid .flyer__wrapper h2 {
   transform: rotate(180deg);
   writing-mode: vertical-rl;
 }
-#web-site__radio:checked ~ .grid .banner__wrapper h2 {
-  transform: rotate(180deg);
-  writing-mode: vertical-rl;
+#banner__radio:checked ~ .grid .web-site__wrapper label,
+#banner__radio:checked ~ .grid .flyer__wrapper label {
+  display: none;
 }
+
+/*web-site*/
+#web-site__radio:checked ~ .grid .web-site__wrapper h2 {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+#web-site__radio:checked ~ .grid .banner__wrapper h2,
 #web-site__radio:checked ~ .grid .flyer__wrapper h2 {
   transform: rotate(180deg);
   writing-mode: vertical-rl;
 }
-#flyer__radio:checked ~ .grid .banner__wrapper h2 {
-  transform: rotate(180deg);
-  writing-mode: vertical-rl;
+#web-site__radio:checked ~ .grid .banner__wrapper label,
+#web-site__radio:checked ~ .grid .flyer__wrapper label {
+  display: none;
 }
+
+/*flyer*/
+#flyer__radio:checked ~ .grid .flyer__wrapper h2 {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+#flyer__radio:checked ~ .grid .banner__wrapper h2,
 #flyer__radio:checked ~ .grid .web-site__wrapper h2 {
   transform: rotate(180deg);
   writing-mode: vertical-rl;
 }
+#flyer__radio:checked ~ .grid .banner__wrapper label,
+#flyer__radio:checked ~ .grid .web-site__wrapper label {
+  display: none;
+}
+
