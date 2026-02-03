@@ -103,7 +103,6 @@ input[type="radio"] {
   writing-mode: vertical-lr;
   transform: rotate(180deg);
 }
-
 .reset__button{
   display: flex;
   position: absolute;
