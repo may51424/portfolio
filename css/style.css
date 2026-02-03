@@ -30,16 +30,19 @@ input[type="radio"] {
   transition: all 0.8s ease;
 }
 .banner__wrapper {
+  position: relative;
   grid-area: banner;
 
 }
 .web-site__wrapper {
+  position: relative;
   grid-area: web-site;
   border: solid 1px black;
   border-top: hidden;
   border-bottom: hidden;
 }
 .flyer__wrapper {
+  position: relative;
   grid-area: flyer;
 
 }
@@ -67,18 +70,53 @@ input[type="radio"] {
   grid-template-areas: "banner web-site flyer";
 }
 /*radio checked, h2*/
+#banner__radio:checked ~ .grid .banner__wrapper h2{
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  transform: rotate(360deg);
+}
 #banner__radio:checked ~ .grid .web-site__wrapper h2,
 #banner__radio:checked ~ .grid .flyer__wrapper h2 {
   writing-mode: vertical-lr;
   transform: rotate(180deg);
+}
+#web-site__radio:checked ~ .grid .web-site__wrapper h2{
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  transform: rotate(360deg);
 }
 #web-site__radio:checked ~ .grid .banner__wrapper h2,
 #web-site__radio:checked ~ .grid .flyer__wrapper h2 {
   writing-mode: vertical-lr;
   transform: rotate(180deg);
 }
+#flyer__radio:checked ~ .grid .flyer__wrapper h2{
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  transform: rotate(360deg);
+}
 #flyer__radio:checked ~ .grid .banner__wrapper h2,
 #flyer__radio:checked ~ .grid .web-site__wrapper h2 {
   writing-mode: vertical-lr;
   transform: rotate(180deg);
+}
+
+.reset__button{
+  display: flex;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-image: url(../images/reset.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 30px;
+  width: 30px;
+  z-index: 100;
+}
+.reset__button label {
+  width: 30px;
+  height: 30px;
 }
