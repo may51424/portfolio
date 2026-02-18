@@ -11,7 +11,7 @@ body {
   font-weight: 300;
   font-style: normal;
 }
-body, h1, h2, h3, h4, h5, h6, p, ul, dl, dd {
+body, h1, h2, h3, h4, h5, h6, p, ul, dl, dd, table, tr, th, td {
   margin: 0;
   padding: 0;
 }
@@ -20,7 +20,7 @@ h1, h2, h3, h4, h5, h6, main, body, header, footer, section, div, p, dl, dt, dd 
   width: fit-content;
   height: fit-content;
 }
-h1, h2, h3, h4, h5, h6, dt, em {
+h1, h2, h3, h4, h5, h6, dt, em, i, th {
   font-style: normal;
   font-weight: 400;
 }

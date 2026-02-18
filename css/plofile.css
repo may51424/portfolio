@@ -28,34 +28,19 @@ nav ul li{
 }
 h1 {
   position: absolute;
+  top: 30px;
+  left: 100px;
+  letter-spacing: 100;
 }
-/*grid*/
-.grid {
-  display: grid;
-  height: 100vh;
-  width: 100%;
-  grid-template-columns: 100px 1fr 140px 0.26fr 0.28fr 100px;
-  grid-template-rows: 100px 1fr 40px 1fr 20px 0.85fr 100px;
-  grid-template-areas:
-  ". . . . . ."
-  ". biography . . . ."
-  ". . . . . ."
-  ". vision . skill skill ."
-  ". . . skill skill ."
-  ". skill-up . skill skill ."
-  ". . . . . .";
+h2 {
+  font-size: 24px;
+  padding-bottom: 15px;
 }
-.biography {
-  grid-area: biography;
+h3 {
+  font-size: 16px;
 }
-.vision {
-  grid-area: vision;
-}
-.skill-up {
-  grid-area: skill-up;
-}
-.skill {
-  grid-area: skill;
+i {
+  font-size: 15px;
 }
 /*images*/
 .plofile__decolation--top {
@@ -80,11 +65,68 @@ h1 {
   background-size: cover;
   z-index: -20;
 }
-/*main*/
-h1 {
-  letter-spacing: 100;
+
+/*grid*/
+.grid {
+  display: grid;
+  height: 100vh;
+  width: 100%;
+  grid-template-columns: 100px 1fr 140px 0.26fr 0.28fr 100px;
+  grid-template-rows: 100px 1fr 40px 1fr 20px 0.85fr 100px;
+  grid-template-areas:
+  ". . . . . ."
+  ". biography biography biography . ."
+  ". . . . . ."
+  ". vision . skill skill ."
+  ". . . skill skill ."
+  ". skill-up . skill skill ."
+  ". . . . . .";
 }
-.Biography {
-  padding: 15px, 30px;
-  background-color: rgb(209, 235, 245, 0.3);
+.biography {
+  grid-area: biography;
+  display: grid;
+  grid-template-columns: [one] 4fr [two] 100px [three] 3fr [four];
+  background: rgb(209, 235, 245, 0.3);
+  background-size: ;
+  border-radius: 10px;
+}
+.biography__introduction {
+  grid-column-start: one;
+  grid-column-end: two;
+}
+.biography__introduction h3 {
+  padding: 30px 0px 0px 30px ;
+}
+.biography__introduction p {
+  padding: 30px 0px 30px 30px;
+  line-height: 180%;
+}
+em {
+  font-size: 24px;
+}
+.biography__hobbies {
+  grid-column-start: three;
+  grid-column-end: four;
+  font-size: 14px;
+}
+.biography__hobbies dl {
+  padding-top: 30px;
+}
+.biography__hobbies dd {
+  padding: 5px 0;
+}
+.vision {
+  grid-area: vision;
+}
+.skill-up {
+  grid-area: skill-up;
+}
+.skill {
+  grid-area: skill;
+}
+.nitting {
+  padding-top: 15px;
+}
+.vision p, .skill-up {
+  line-height: 180%;
 }
