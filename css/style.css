@@ -5,12 +5,24 @@ body {
   font-weight: 400;
   font-style: normal;
 }
-body, h1, h2, h3, h4, h5, h6, p, ul {
+.notoJP {
+  font-family: "Noto Sans JP", sans-serif;
+  font-optical-sizing: 16px;
+  font-weight: 300;
+  font-style: normal;
+}
+body, h1, h2, h3, h4, h5, h6, p, ul, dl, dd {
   margin: 0;
   padding: 0;
 }
-ul {
-  display: flex;
+h1, h2, h3, h4, h5, h6, main, body, header, footer, section, div, p, dl, dt, dd {
+  display: block;
+  width: fit-content;
+  height: fit-content;
+}
+h1, h2, h3, h4, h5, h6, dt, em {
+  font-style: normal;
+  font-weight: 400;
 }
 li {
   list-style: none;
@@ -19,4 +31,24 @@ a {
   color: black;
   text-decoration: none;
   font-style: normal;
+}
+nav {
+  position: absolute;
+  top: 30px;
+  right:50px;
+  z-index: 100;
+}
+.nav__top,
+.nav__work{
+  margin-right: 60px;
+}
+nav ul {
+  display: flex;
+}
+nav ul li{
+  position: relative;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 100;
+  text-transform: uppercase;
 }

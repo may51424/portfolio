@@ -51,23 +51,12 @@ h1 img {
 }
 nav {
   animation: fadeIn 1s 1.5s both;
-  display: flex;
-  position: absolute;
-  top: 30px;
-  right:50px;
-  z-index: 100;
 }
-.nav__work{
-  margin-right: 70px;
+.nav__top {
+  color: rgb(0, 0, 0,0.5);
 }
-nav ul li{
-  position: relative;
-  font-size: 20px;
-  line-height: 100%;
-  letter-spacing: 100;
-  text-transform: uppercase;
-}
-nav li::after {
+.nav__work::after,
+.nav__plofile::after {
   content: '';
   position: absolute;
   bottom: -5px;
@@ -78,7 +67,8 @@ nav li::after {
   transform: translateX(-50%);
   transition: 0.3s ease;
 }
-nav li:hover::after {
+.nav__work:hover::after,
+.nav__plofile:hover::after {
   width: 80%;
 }
 footer{

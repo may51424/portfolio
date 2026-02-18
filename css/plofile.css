@@ -1,0 +1,90 @@
+@charset "utf-8";
+/*nav*/
+nav ul li{
+  position: relative;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 100;
+  text-transform: uppercase;
+}
+.nav__plofile {
+  color: rgb(0, 0, 0,0.5);
+}
+.nav__top::after,
+.nav__work::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  width: 0%;
+  height: 1.5px;
+  background-color: black;
+  transform: translateX(-50%);
+  transition: 0.3s ease;
+}
+.nav__top:hover::after,
+.nav__work:hover::after {
+  width: 80%;
+}
+h1 {
+  position: absolute;
+}
+/*grid*/
+.grid {
+  display: grid;
+  height: 100vh;
+  width: 100%;
+  grid-template-columns: 100px 1fr 140px 0.26fr 0.28fr 100px;
+  grid-template-rows: 100px 1fr 40px 1fr 20px 0.85fr 100px;
+  grid-template-areas:
+  ". . . . . ."
+  ". biography . . . ."
+  ". . . . . ."
+  ". vision . skill skill ."
+  ". . . skill skill ."
+  ". skill-up . skill skill ."
+  ". . . . . .";
+}
+.biography {
+  grid-area: biography;
+}
+.vision {
+  grid-area: vision;
+}
+.skill-up {
+  grid-area: skill-up;
+}
+.skill {
+  grid-area: skill;
+}
+/*images*/
+.plofile__decolation--top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 249px;
+  height: 273px;
+  background-image: url(../images/plofile__decolation--top.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -20;
+}
+.plofile__decolation--bottom {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 278px;
+  height: 319px;
+  background-image: url(../images/plofile__decolation--bottom.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -20;
+}
+/*main*/
+h1 {
+  letter-spacing: 100;
+}
+.Biography {
+  padding: 15px, 30px;
+  background-color: rgb(209, 235, 245, 0.3);
+}
