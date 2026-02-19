@@ -1,4 +1,20 @@
 @charset "utf-8";
+@keyframes fadeIn{
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes line{
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 /*nav*/
 nav ul li{
   position: relative;
@@ -26,7 +42,10 @@ nav ul li{
 .nav__work:hover::after {
   width: 80%;
 }
+
+/*font*/
 h1 {
+  animation: fadeIn 1s 0s both;
   position: absolute;
   top: 30px;
   left: 100px;
@@ -36,12 +55,32 @@ h2 {
   font-size: 24px;
   padding-bottom: 15px;
 }
+h2::after{
+
+background-color: #C4E8D9;
+content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  width: 0%;
+  height: 1.5px;
+transform: translateX
+transition: 0.3s ease;
+}
 h3 {
   font-size: 16px;
 }
-i {
-  font-size: 15px;
+em {
+  font-size: 24px;
 }
+i {
+  font-size: 12px;
+}
+
+.vision p, .skill-up {
+  line-height: 180%;
+}
+
 /*images*/
 .plofile__decolation--top {
   position: absolute;
@@ -68,6 +107,7 @@ i {
 
 /*grid*/
 .grid {
+  animation: fadeIn 1s 1s both;
   display: grid;
   height: 100vh;
   width: 100%;
@@ -82,6 +122,17 @@ i {
   ". skill-up . skill skill ."
   ". . . . . .";
 }
+.vision {
+  grid-area: vision;
+}
+.skill-up {
+  grid-area: skill-up;
+}
+.skill {
+  grid-area: skill;
+}
+
+/*biography*/
 .biography {
   grid-area: biography;
   display: grid;
@@ -101,9 +152,6 @@ i {
   padding: 30px 0px 30px 30px;
   line-height: 180%;
 }
-em {
-  font-size: 24px;
-}
 .biography__hobbies {
   grid-column-start: three;
   grid-column-end: four;
@@ -115,18 +163,17 @@ em {
 .biography__hobbies dd {
   padding: 5px 0;
 }
-.vision {
-  grid-area: vision;
-}
-.skill-up {
-  grid-area: skill-up;
-}
-.skill {
-  grid-area: skill;
-}
-.nitting {
+.biography__crochet {
   padding-top: 15px;
 }
-.vision p, .skill-up {
-  line-height: 180%;
+
+/*table*/
+table {
+  position: relative;
+  left: -10px;
+  border-spacing: 10px 10px;
+}
+th {
+  font-size: 18px;
+  text-align: left;
 }
