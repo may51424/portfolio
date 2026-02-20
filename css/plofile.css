@@ -9,10 +9,10 @@
 }
 @keyframes line{
   from {
-    opacity: 0;
+    width: 0%;
   }
   to {
-    opacity: 1;
+    width: 100%;
   }
 }
 /*nav*/
@@ -52,20 +52,18 @@ h1 {
   letter-spacing: 100;
 }
 h2 {
+  position: relative;
   font-size: 24px;
-  padding-bottom: 15px;
 }
 h2::after{
-
-background-color: #C4E8D9;
-content: '';
+  animation: line 0.5s 2s both;
+  content: '';
   position: absolute;
-  bottom: -5px;
-  left: 50%;
-  width: 0%;
-  height: 1.5px;
-transform: translateX
-transition: 0.3s ease;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 2.5px;
+  background-color: #C4E8D9;
 }
 h3 {
   font-size: 16px;
@@ -77,8 +75,9 @@ i {
   font-size: 12px;
 }
 
-.vision p, .skill-up {
+.vision p, .skill-up p{
   line-height: 180%;
+  padding-top: 20px;
 }
 
 /*images*/
@@ -137,19 +136,17 @@ i {
   grid-area: biography;
   display: grid;
   grid-template-columns: [one] 4fr [two] 100px [three] 3fr [four];
+  padding: 30px 30px;
   background: rgb(209, 235, 245, 0.3);
-  background-size: ;
   border-radius: 10px;
+  width: 80vw;
 }
 .biography__introduction {
   grid-column-start: one;
   grid-column-end: two;
 }
-.biography__introduction h3 {
-  padding: 30px 0px 0px 30px ;
-}
 .biography__introduction p {
-  padding: 30px 0px 30px 30px;
+  padding: 20px 0px 0px 0px;
   line-height: 180%;
 }
 .biography__hobbies {
@@ -157,9 +154,7 @@ i {
   grid-column-end: four;
   font-size: 14px;
 }
-.biography__hobbies dl {
-  padding-top: 30px;
-}
+
 .biography__hobbies dd {
   padding: 5px 0;
 }
@@ -172,6 +167,7 @@ table {
   position: relative;
   left: -10px;
   border-spacing: 10px 10px;
+  padding-top: 20px;
 }
 th {
   font-size: 18px;
