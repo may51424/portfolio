@@ -1,6 +1,37 @@
 @charset "utf-8";
+html, body, main {
+  width: 100%;
+  height: 100%;
+}
+main {
+  position: relative;
+  overflow: hidden;
+}
+.work_decolation_left {
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+  z-index: -1;
+  background-image: url(../images/work_decolation_left.png);
+  width: 300px;
+  height: 300px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.work_decolation_right {
+  position: absolute;
+  top: 5%;
+  right: 0%;
+  z-index: -1;
+  background-image: url(../images/work_decolation_right.png);
+  width: 250px;
+  height: 500px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
 nav {
   animation: fadeIn 1s 1.5s both;
+  z-index: 0;
 }
 .nav__work {
   color: rgb(0, 0, 0,0.5);
@@ -21,69 +52,104 @@ nav {
 .nav__plofile:hover::after {
   width: 80%;
 }
-
-.grid {
+.menu {
+  position: absolute;
+  top: 30px;
+  left: 50px;
+  font-style: bold;
+}
+.menu_banner {
+  font-size: 40px;
+}
+.menu_web_site {
+  font-size: 24px;
+}
+.recommend {
+  position: absolute;
+  top: 40px;
+  left: calc(50% - 112px);
+}
+.images {
   display: grid;
-  height: 100vh;
-  width: 100vw;
-  grid-template-columns : ;
-  grid-template-rows: ;
-  grid-template-areas:
- 
- 
-  ;
+
+  grid-template-columns: auto auto auto auto;
+  gap: 50px;
+  margin: 13% auto auto auto;
 }
-.image_work1 {
-  grid-area: image_work1;
-  background-image: url(../images/work1.png);
-  background-size: contain;
-  background-repeat: no-repeat;
+.images img {
+  width: 20vw;
 }
-.image_work2 {
-  grid-area: image_work2;
-  background-image: url(../images/work2.png);
-  background-size: contain;
-  background-repeat: no-repeat;
+.image_work1, .image_work2, .image_work3, .image_work4 {
+  position: static;
 }
-.image_work3 {
-  grid-area: image_work3;
-  background-image: url(../images/work3.png);
-  background-size: contain;
-  background-repeat: no-repeat;
+.image_work3 p {
+  margin-top: 20px;
 }
-.image_work3_1 {
-  grid-area: image_work3_1;
-  background-image: url(../images/work3_1.png);
-  background-size: contain;
-  background-repeat: no-repeat;
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;                /* top/right/bottom/left: 0 の省略形 */
+  z-index: 1;
 }
-.image_work3_2 {
-  grid-area: image_work3_2;
-  background-image: url(../images/work3_2.png);
-  background-size: contain;
-  background-repeat: no-repeat;
+
+.modal:target {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.image_work4 {
-  grid-area: image_work4;
-  background-image: url(../images/work4.png);
-  background-size: contain;
-  background-repeat: no-repeat;
+
+/* 背景オーバーレイ（クリックで閉じる） */
+.modal__overlay {
+  position: absolute;
+  inset: 0;
+  width: 100vw;   /* ← 追加 */
+  height: 100vh;  /* ← 追加 */
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 2;
 }
-.image_work4_1 {
-  grid-area: image_work4_1;
-  background-image: url(../images/work4_1.png);
-  background-size: contain;
-  background-repeat: no-repeat;
+
+/* モーダル本体 */
+.modal__content {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  width: 80vw;
+  max-height: 85vh;
+  overflow: hidden;
+  border-radius: 4px;
 }
-.image_work4_2 {
-  grid-area: image_work4_2;
-  background-image: url(../images/work4_2.png);
-  background-size: contain;
-  background-repeat: no-repeat;
+
+/* 左：画像群 */
+.modal__images {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 30px;
+  overflow-y: auto;
+  flex: 1;
 }
-.image_illust {
-  grid-area: image_illust;
-  background-image: url(../images/illust.png);
-  background-size: contain;
-  background-repeat: no-repeat;
+
+.modal__images img {
+  width: 100%;
+  max-width: 400px;
+}
+
+/* 右：説明 */
+.modal__description {
+  background-color: white;
+  width: 300px;
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: relative;
+}
+
+/* 閉じるボタン */
+.modal__close {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  font-size: 20px;
+  color: #666;
 }
